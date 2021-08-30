@@ -1,0 +1,28 @@
+package com.example.controller;
+
+
+import com.example.service.Hello;
+import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Log4j2
+@Controller
+
+public class SampleController {
+
+    @Autowired
+    private Hello hello;
+
+    @GetMapping("/hello")
+    public void hello() {
+
+        log.info("hello=================");
+        log.info("hello=================");
+        log.info(hello);
+        log.info("hello=================");
+        log.info("hello=================");
+
+    }
+}
